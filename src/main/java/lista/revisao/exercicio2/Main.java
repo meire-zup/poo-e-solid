@@ -1,21 +1,31 @@
 package lista.revisao.exercicio2;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-            ServiceCandidato serviceCandidato = new ServiceCandidato();
+        Scanner scanner = new Scanner(System.in);
 
+        InteracaoUsuario interacaoUsuario = new InteracaoUsuario();
 
+        // Instanciando objetos:
+        ServiceCandidato serviceCandidato = new ServiceCandidato();
 
-            serviceCandidato.adicionar(123456L, 5.0);
-            serviceCandidato.adicionar(12345678L, 3.0);
+        // Testando método adicionar candidato:
+        interacaoUsuario.adicionarCandidatos();
 
+        // Testando método listar candidatos:
+        serviceCandidato.listarCandidatos();
+        serviceCandidato.adicionar(22, 5.0);
+        serviceCandidato.adicionar(55, 8.0);
 
-            serviceCandidato.listarCandidatos();
+        serviceCandidato.listarCandidatos();
 
-            serviceCandidato.excluirCandidato(12345678L);
+        // Testando método excluir funcionário
+        serviceCandidato.excluirCandidato(22);
+        serviceCandidato.listarCandidatos();
 
-            serviceCandidato.listarCandidatos();
 
     }
 

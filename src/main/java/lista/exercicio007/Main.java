@@ -5,6 +5,7 @@ import lista.revisao.exercicio2.ServiceCandidato;
 public class Main {
 
     public static void main(String[] args) {
+        // Instanciando objetos:
 
         ServicePais servicoPais = new ServicePais();
 
@@ -22,10 +23,14 @@ public class Main {
         suica.setPopulacao(8700000L);
 
 
-        servicoPais.eVizinho(suica, alemanha);
-        System.out.println(servicoPais.eVizinho(suica, alemanha));
+        // Testando método que informe se outro país é vizinho:
+        System.out.println("São vizinhos: " + servicoPais.eVizinho(suica, alemanha));
+
+        // Testando método que dado um país informa a sua população:
+        System.out.printf("População: %,d" ,servicoPais.getDensidade(suica));
+
+        // Testando método que lista vizinhos:
         servicoPais.listarVizinhos(suica);
-        System.out.println(servicoPais.getDensidade(suica));
 
 
     }

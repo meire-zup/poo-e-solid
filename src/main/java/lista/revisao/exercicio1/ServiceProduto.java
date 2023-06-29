@@ -3,12 +3,13 @@ package lista.revisao.exercicio1;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 public class ServiceProduto {
 
     List<Produto> produtos = new ArrayList<>();
 
-    public void adicionar(String nome, Double preco, int quantidade) {
+    public void adicionarProduto(String nome, Double preco, int quantidade) {
 
         Produto produto = new Produto(nome, preco);
 
@@ -20,6 +21,7 @@ public class ServiceProduto {
 
         System.out.println("Produto adicinonado com sucesso!");
         System.out.println("Produto: " + produto.getNome() + " \nPreço: " + produto.getPreco() + " \nQuantidade: " + quantidade);
+        System.out.println("--------------------------------------");
 
     }
 
@@ -56,4 +58,5 @@ public class ServiceProduto {
         }
         return false;
     }
+
 }

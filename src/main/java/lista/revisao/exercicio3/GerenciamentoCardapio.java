@@ -4,12 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GerenciamentoCardapio {
-     private List<Prato> pratos;
+     private List<Prato> pratos = new ArrayList<>();
+
+    public List<Prato> getPratos() {
+        return pratos;
+    }
+
     public  void listarPratos() {
 
         for (Prato prato : pratos) {
 
-            System.out.println(prato.getNome());
+            System.out.println("Prato: " + prato.getNome());
         }
     }
 
@@ -23,6 +28,12 @@ public class GerenciamentoCardapio {
 
         System.out.println(cardapio.toString());
 
+    }
+
+    public void excluirPrato(Prato prato) {
+
+        pratos.remove(prato);
+        System.out.println(prato.getNome() + " excluído com sucesso!");
     }
 
 }

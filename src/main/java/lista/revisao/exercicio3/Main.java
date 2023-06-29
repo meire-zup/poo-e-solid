@@ -11,6 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // Instanciando objetos:
         GerenciamentoCardapio gerenciamentoCardapio = new GerenciamentoCardapio();
 
         Ingrediente ingrediente1 = new Ingrediente("carne de frango");
@@ -30,18 +31,26 @@ public class Main {
         prato2.getIngredientes().add(ingrediente1);
         prato2.getIngredientes().add(ingrediente2);
 
-
         Prato prato3 = new Prato("sobremesa");
         prato3.getIngredientes().add(ingrediente6);
         prato3.getIngredientes().add(ingrediente7);
 
-
+        // Testando método montar cardápio:
         gerenciamentoCardapio.montarCardapio(prato1, prato2, prato3);
 
+        // Testando método listar pratos:
+        System.out.println("Lista de pratos:");
+        gerenciamentoCardapio.getPratos().add(prato1);
+        gerenciamentoCardapio.getPratos().add(prato2);
+        gerenciamentoCardapio.getPratos().add(prato3);
+        gerenciamentoCardapio.listarPratos();
+        System.out.println("-------------------------------");
 
-
-
-
+        // Testando método excluir prato:
+        gerenciamentoCardapio.excluirPrato(prato1);
+        System.out.println("-------------------------------");
+        System.out.println("Lista de pratos:");
+        gerenciamentoCardapio.listarPratos();
 
     }
 }

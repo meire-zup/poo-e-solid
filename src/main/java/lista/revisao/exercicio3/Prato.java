@@ -32,9 +32,7 @@ public class Prato {
 
     @Override
     public String toString() {
-        return "Prato{" +
-                "nome='" + nome + '\'' +
-                ", ingredientes=" + ingredientes +
-                '}';
+        return nome +
+                " - "+ ingredientes;
     }
 }

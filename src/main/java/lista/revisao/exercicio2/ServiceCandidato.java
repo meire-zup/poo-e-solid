@@ -8,7 +8,7 @@ public class ServiceCandidato {
 
     List<Candidato> candidatos = new ArrayList<>();
 
-    public void adicionar(Long nomeDeMatricula, Double nota) {
+    public void adicionar(Integer nomeDeMatricula, Double nota) {
 
         Candidato candidato = new Candidato(nomeDeMatricula, nota);
 
@@ -16,6 +16,7 @@ public class ServiceCandidato {
 
         System.out.println("Candidato adicinonado com sucesso!");
         System.out.println("Candidato: " + candidato.getNumeroDeMatricula() + " \nNota: " + candidato.getNota());
+        System.out.println("------------------------------------------");
 
     }
 
@@ -23,12 +24,12 @@ public class ServiceCandidato {
 
         for (Candidato candidato : candidatos) {
 
-            System.out.println(candidato);
+            System.out.println(candidato.toString());
 
         }
     }
 
-    public void excluirCandidato(Long numeroDeMatricula) {
+    public void excluirCandidato(Integer numeroDeMatricula) {
         if (candidatoExiste(numeroDeMatricula)) {
             Iterator<Candidato> iterator = candidatos.iterator();
             while (iterator.hasNext()) {
@@ -44,7 +45,7 @@ public class ServiceCandidato {
     }
 
 
-    private boolean candidatoExiste(Long numeroDeMatricula) {
+    private boolean candidatoExiste(Integer numeroDeMatricula) {
         for (Candidato candidato : candidatos) {
             if (candidato.getNumeroDeMatricula().compareTo(numeroDeMatricula) == 0) {
                 return true;
