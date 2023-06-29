@@ -27,7 +27,8 @@ public class Main {
         System.out.println("São vizinhos: " + servicoPais.eVizinho(suica, alemanha));
 
         // Testando método que dado um país informa a sua população:
-        System.out.printf("População: %,d" ,servicoPais.getDensidade(suica));
+        System.out.printf("População: %,d\n" ,servicoPais.getDensidade(suica));
+
 
         // Testando método que lista vizinhos:
         servicoPais.listarVizinhos(suica);
