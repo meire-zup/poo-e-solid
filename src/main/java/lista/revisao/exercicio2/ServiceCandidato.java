@@ -8,15 +8,16 @@ public class ServiceCandidato {
 
     List<Candidato> candidatos = new ArrayList<>();
 
-    public void adicionar(Integer nomeDeMatricula, Double nota) {
+    public void adicionar(Integer numeroDeMatricula, Double nota) {
 
-        Candidato candidato = new Candidato(nomeDeMatricula, nota);
+        Candidato candidato = new Candidato(numeroDeMatricula, nota);
 
         candidatos.add(candidato);
 
         System.out.println("Candidato adicinonado com sucesso!");
         System.out.println("Candidato: " + candidato.getNumeroDeMatricula() + " \nNota: " + candidato.getNota());
         System.out.println("------------------------------------------");
+
 
     }
 
@@ -38,7 +39,7 @@ public class ServiceCandidato {
                     iterator.remove();
                 }
             }
-            System.out.println("Candidato com número de matrícula " + numeroDeMatricula + " excluídos com sucesso!");
+            System.out.println("Candidato com número de matrícula " + numeroDeMatricula + " excluído com sucesso!");
         } else {
             System.out.println("Candidato não encontrado!");
         }

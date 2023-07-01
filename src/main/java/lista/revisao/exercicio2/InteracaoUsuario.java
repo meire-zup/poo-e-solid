@@ -7,7 +7,11 @@ public class InteracaoUsuario {
 
     Scanner scanner = new Scanner(System.in);
 
-    ServiceCandidato serviceCandidato = new ServiceCandidato();
+    ServiceCandidato serviceCandidato;
+
+    public InteracaoUsuario(ServiceCandidato serviceCandidato) {
+        this.serviceCandidato = serviceCandidato;
+    }
 
     public void adicionarCandidatos() {
 
@@ -16,9 +20,9 @@ public class InteracaoUsuario {
 
         for (int i = 0; i <quantidade ; i++) {
             System.out.println("Informe o numero da matricula:");
-            int numeroMatricula = scanner.nextInt();
+            Integer numeroMatricula = scanner.nextInt();
             System.out.println("Informe a nota do candidato:");
-            double nota = scanner.nextDouble();
+            Double nota = scanner.nextDouble();
             serviceCandidato.adicionar(numeroMatricula,nota);
         }
     }
